@@ -14,6 +14,8 @@
   ],
   "rules": {
     // let the js file can use jsx synatx and make eslint happy
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "prop-types": [ { "ignore": ["children"] }],
+    "no-multi-assign": "off"
   }
 }
