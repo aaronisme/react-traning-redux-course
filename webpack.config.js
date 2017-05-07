@@ -3,7 +3,7 @@ const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 let plugins;
-let devtool;
+let devtool = 'inline-source-map';
 
 const productionPlugins = [
   new webpack.DefinePlugin({

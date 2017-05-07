@@ -1,16 +1,10 @@
 import React from 'react';
 import { Route, HashRouter } from 'react-router-dom';
-import { HomeContainer, MainContainer } from '../containers';
-
-const App = () => (
-  <MainContainer>
-    <HomeContainer />
-  </MainContainer>
-);
+import { HomeContainer, compoentWrapper } from '../containers';
 
 const Routes = () => (
   <HashRouter>
-    <Route path="/" component={App} />
+    <Route path="/" component={compoentWrapper(HomeContainer)} />
   </HashRouter>
 );
 
