@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import { container, navContainer, link } from './styles.css';
 
 function NavLinks({ isAuthed }) {
@@ -17,7 +17,6 @@ function ActionLinks({ isAuthed }) {
       <li><Link to="/logout" className={link}>Logout</Link></li>
     </ul>
     : <ul>
-      <li>New Duck</li>
       <li><Link to="/" className={link}>Home</Link></li>
       <li><Link to="/auth" className={link}>Authenticate</Link></li>
     </ul>;

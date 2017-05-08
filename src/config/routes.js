@@ -1,11 +1,14 @@
 import React from 'react';
-import { Route, HashRouter } from 'react-router-dom';
-import { HomeContainer, compoentWrapper } from '../containers';
+import { Router,Route, IndexRoute, hashHistory } from 'react-router';
+import { HomeContainer, MainContainer, AuthContainer } from '../containers';
 
 const Routes = () => (
-  <HashRouter>
-    <Route path="/" component={compoentWrapper(HomeContainer)} />
-  </HashRouter>
+  <Router history={hashHistory}>
+    <Route path="/" component={MainContainer}>
+      <Route path="auth" component={AuthContainer} />
+      <IndexRoute  component={HomeContainer} />
+    </Route>
+  </Router>
 );
 
 export default Routes;
