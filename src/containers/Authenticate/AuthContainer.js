@@ -1,16 +1,16 @@
 import React from 'react';
 import { Authenticate } from '../../components';
-import auth from '../../helpers/auth'
+import auth from '../../helpers/auth';
 
 const handleAuth = () => {
-  auth().then(console.log)
+  auth().then(console.log);
 };
 
 const AuthContainer = () => (
   <Authenticate
     onAuth={() => handleAuth()}
     isFetching={false}
-    error=''
+    error=""
   />
 );
 
